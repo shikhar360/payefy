@@ -1,5 +1,7 @@
-//SPDX-License-Identifier: MIT
-pragma solidity ^0.8.13;
+//SPDX-License-Identifier: MIT ;
+pragma solidity ^0.8.14;
+
+
 // import {IFakeDAI} from "./IFakeDAI.sol";
 
 import { ISuperfluid, ISuperToken } from "@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol";
@@ -9,7 +11,7 @@ import {IConstantFlowAgreementV1} from "@superfluid-finance/ethereum-contracts/c
 import {CFAv1Library} from "@superfluid-finance/ethereum-contracts/contracts/apps/CFAv1Library.sol";
 
 // For deployment on Goerli Testnet
-contract FlowSender {
+contract SteamPay {
 
     using CFAv1Library for CFAv1Library.InitData;
     CFAv1Library.InitData public cfaV1; //initialize cfaV1 variable
