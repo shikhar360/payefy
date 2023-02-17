@@ -1,4 +1,5 @@
-pragma solidity ^0.8.14;
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.8;
 
 import {IConnext} from "@connext/smart-contracts/contracts/core/connext/interfaces/IConnext.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
@@ -49,3 +50,8 @@ contract SimpleBridge {
     );  
   }
 }
+
+//create a counter contract 
+
+
+// create a counter app 
