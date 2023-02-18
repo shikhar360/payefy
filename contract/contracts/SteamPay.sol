@@ -9,6 +9,7 @@ import { ISuperfluid, ISuperToken } from "@superfluid-finance/ethereum-contracts
 import {IConstantFlowAgreementV1} from "@superfluid-finance/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol";
 
 import {CFAv1Library} from "@superfluid-finance/ethereum-contracts/contracts/apps/CFAv1Library.sol";
+import {upgradeByETH} from "@superfluid-finance/ethereum-contracts/contracts/interfaces/tokens/ISETH.sol";
 
 // For deployment on Goerli Testnet
 contract SteamPay {
@@ -42,17 +43,17 @@ contract SteamPay {
     /// @dev Mints 10,000 fDAI to this contract and wraps it all into fDAIx
     function gainDaiX() external {
 
-        // Get address of fDAI by getting underlying token address from DAIx token
-        // IFakeDAI fdai = IFakeDAI( goerliDaiX.getUnderlyingToken() );
+        Get address of fDAI by getting underlying token address from DAIx token
+        IFakeDAI fdai = IFakeDAI( goerliDaiX.getUnderlyingToken() );
         
-        // Mint 10,000 fDAI
-        // fdai.mint(address(this), 10000e18);
+        Mint 10,000 fDAI
+        fdai.mint(address(this), 10000e18);
 
-        // // Approve fDAIx contract to spend fDAI
-        // fdai.approve(address(goerliDaiX), 20000e18);
+        // Approve fDAIx contract to spend fDAI
+        fdai.approve(address(goerliDaiX), 20000e18);
 
-        // // Wrap the fDAI into fDAIx
-        // goerliDaiX.upgrade(10000e18);
+        // Wrap the fDAI into fDAIx
+        goerliDaiX.upgrade(10000e18);
 
     }
 
